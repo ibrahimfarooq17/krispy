@@ -1,4 +1,4 @@
-# Covernomads – Demo Project
+# Krispy AI – Demo Project
 
 This project showcases the architecture and development patterns behind the core service of Krispy. It represents the core structure, modules, and coding practices used in building the system.
 
