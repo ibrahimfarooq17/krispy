@@ -1,11 +1,15 @@
-# Krispy AI – Demo Project
+# Krispy AI
 
-This project showcases the architecture and development patterns behind the core service of Krispy. It represents the core structure, modules, and coding practices used in building the system.
+Krispy provides marketing, automation and customer retention services over WhatsApp. It allows businesses a deeper insight into their customer base and gives valuable statistics along with a plan of action. Each business onboarded on Krispy has their own personal AI agent that is trained on the data of the business. Once trained and integrated, it can reply to the customers on WhatsApp, set up automations, flow and run campaigns.
+
+I was brought on as the founding engineer of Krispy. I worked closely with the CTO to set up the complete architecture of services, integrations with various APIs and deploying the services. I set up end-to-end services responsible for chatting over WhatsApp, “catching” Shopify hooks, automations/flows, subscription and collecting contacts base.
+
+Krispy is built upon a micro-services architecture, with a shared database. Each dedicated service handles a set of tasks. We have 5 micro-services deployed yet; core, chat, webhook, cron and AI services.
 
 
 ## Overview
 
-This core backend service features:
+This repository features only the core backend service of Krispy including:
 - Authentication
 - User management
 - Flows/Automations
@@ -21,12 +25,6 @@ The project focuses on demonstrating structure, clarity, and engineering approac
 - TailwindCSS
 - Node.js / ExpressJs
 
-## Features
-
-- Clean and modular folder structure
-- Reusable UI components
-- API patterns
-
 ## Note
 
-This repository is a demonstration version created for showcasing work and does not include production configurations or real business logic.
+This repository is a sanitized version of the production service. It does not contain sensitive/confidential information.
