@@ -6,24 +6,27 @@ I was brought on as the founding engineer of Krispy. I worked closely with the C
 
 Krispy is built upon a micro-services architecture, with a shared database. Each dedicated service handles a set of tasks. We have 5 micro-services deployed yet; core, chat, webhook, cron and AI services.
 
-
 ## Overview
 
-This repository features only the core backend service of Krispy including:
+This repository features the backend service of Krispy along with the frontend. The frontend is added here for ease of access. For production, it is hosted as a separate service.
+
+Overall this repository includes:
+
+- Complete frontend pages, components and markup
+- DB Schema and Management
 - Authentication
 - User management
 - Flows/Automations
-- 3rd Party Integrations with Shopify, Klaviyo, Twillio etc.
+- 3rd Party Integrations with Shopify, Klaviyo, Twillio, WhatsApp etc.
 
 The project focuses on demonstrating structure, clarity, and engineering approach.
 
-
 ## Tech Stack
 
-- React / Next.js
 - JavaScript
-- TailwindCSS
+- React / Next.js / TailwindCSS
 - Node.js / ExpressJs
+- MongoDB
 
 ## Note
 

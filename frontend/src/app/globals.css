@@ -1,0 +1,886 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+	--primary-orange: rgba(253, 79, 2, 0.9);
+	--secondary-blue-light: #5c78ff;
+	--secondary-blue-dark: #10324f;
+	--secondary-chat-color: '#ced7ff';
+	--secondary-green: #04a88c;
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #a5a5a5;
+	border-radius: 10px;
+}
+
+#react-qrcode-logo {
+	border-radius: 8px;
+}
+
+input:disabled {
+	color: #999;
+}
+
+button:disabled {
+	background-color: #a5a5a5 !important;
+	color: rgb(232, 232, 232) !important;
+}
+
+p {
+	margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0.5rem;
+}
+
+code {
+	font-size: 0.9em;
+}
+
+.Mui-checked + .MuiSwitch-track {
+	background-color: #fd4f02 !important;
+	opacity: 1 !important;
+}
+.MuiIconButton-root {
+	border-radius: 8px !important;
+}
+.MuiTableContainer-root {
+	box-shadow: none !important;
+	border-radius: 8px !important;
+	border: 1px solid #ececec !important;
+}
+.MuiTableCell-body {
+	color: #5e5e5e !important;
+	font-size: 14px !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	line-height: 20px !important;
+}
+.MuiTableCell-head {
+	color: #2a2a2a !important;
+	font-family: 'Inter', sans-serif !important;
+	font-size: 14px !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	line-height: 20px !important;
+}
+.childBubble {
+	width: 100%;
+	/* width expands to fit bubble */
+	height: 100%;
+	/* width expands to fit bubble */
+	border-radius: 50%;
+	/* rounded border forms a circle */
+}
+
+.grey-container {
+	cursor: pointer;
+	background-color: #f1f1f1;
+	border-radius: 2px;
+	padding: 7px;
+}
+.hvr-grey:hover {
+	cursor: pointer;
+	background-color: #f1f1f1;
+	border-radius: 10px;
+	padding: 5px;
+}
+
+.rti--input {
+	width: 100% !important;
+}
+
+.rti--container {
+	--rti-main: var(--primary-orange) !important;
+}
+
+.d360-connect-btn {
+	background-color: var(--primary-orange);
+	border: 0;
+	padding: 8px;
+	width: 100%;
+	color: #ffffff;
+	border-radius: 8px;
+}
+
+.d360-connect-btn:hover {
+	background-color: rgb(227, 70, 0);
+}
+
+.input-subtitle {
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 20px;
+	color: #5e5e5e;
+	margin: 10px 0;
+}
+
+/* ------------------------------ TYPOGRAPHY ------------------------------------ */
+.black {
+	color: #121212;
+}
+
+.grey {
+	color: #5e5e5e;
+}
+
+.f-xs-regular {
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+}
+
+.f-2xl-medium {
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 32px;
+	/* 133.333% */
+}
+
+.f-2xl-regular {
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 32px;
+}
+
+.f-sm-regular {
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.f-md-medium {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 24px;
+	/* 150% */
+}
+
+.input-sec-label {
+	font-size: 11px;
+	font-weight: 300;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+/* ------------------------------ TYPOGRAPHY ------------------------------------ */
+
+/* -------------------------------MUI TABS-------------------------------- */
+.MuiTab-root {
+	color: #b5babe !important;
+	font-size: 14px !important;
+	font-weight: 600 !important;
+	text-transform: capitalize !important;
+	line-height: 20px;
+}
+
+.MuiTab-root.Mui-selected {
+	font-size: 14px !important;
+	font-weight: 600 !important;
+	line-height: 20px !important;
+	color: #fd4f02 !important;
+}
+
+.MuiTabs-indicator {
+	/* Customize the indicator styles if needed */
+	background: var(--primary-orange) !important;
+}
+
+/* -------------------------------MUI TABS-------------------------------- */
+
+/* ------------------------------ MUI STEPPER ------------------------------------ */
+.MuiStepIcon-root.Mui-active {
+	color: var(--primary-orange) !important;
+}
+
+.MuiStepIcon-root.Mui-completed {
+	color: var(--primary-orange) !important;
+}
+
+.MuiStepLabel-label {
+	font-family: var(--bs-body-font-family) !important;
+}
+
+.MuiStepLabel-label.Mui-active {
+	font-weight: 600 !important;
+}
+
+.MuiStepLabel-label.Mui-disabled {
+	font-weight: 400 !important;
+}
+
+.MuiStepConnector-horizontal.Mui-active > .MuiStepConnector-lineHorizontal {
+	border-color: var(--primary-orange) !important;
+}
+
+/* ------------------------------ MUI STEPPER ------------------------------------ */
+
+/* ------------------------------ MUI LINEAR PROGRESS ------------------------------------ */
+.MuiLinearProgress-root {
+	background-color: rgb(237, 206, 167) !important;
+	height: 7px;
+	border-radius: 10px;
+}
+
+.MuiLinearProgress-bar {
+	background-color: var(--primary-orange) !important;
+}
+
+/* ------------------------------ MUI LINEAR PROGRESS ------------------------------------ */
+
+/* ------------------------------ MODAL ------------------------------------ */
+.MuiPaper-root.MuiDialog-paper {
+	padding: 40px !important;
+	border-radius: 10px !important;
+}
+
+.MuiDialogTitle-root {
+	padding: 0 !important;
+}
+
+.MuiDialogContent-root {
+	padding: 0 !important;
+}
+
+.MuiDialogActions-root {
+	padding: 0 !important;
+}
+
+/* ------------------------------ MODAL ------------------------------------ */
+
+/* ------------------------------ GENERAL ------------------------------------ */
+h2 {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 32px;
+	letter-spacing: 0em;
+}
+
+.f-reg {
+	font-size: 14px;
+	font-weight: 200;
+	line-height: 20px;
+	letter-spacing: 0em;
+}
+
+.f-light {
+	font-size: 12px;
+	font-weight: 100;
+	line-height: 10px;
+	letter-spacing: 0em;
+}
+
+.input-label {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 0em;
+	text-align: left;
+	margin-bottom: 5px;
+}
+
+button {
+	font-family: 'Inter', sans-serif !important;
+}
+
+.dropzone-container {
+	border: 2px dashed #ececec;
+	border-radius: 8px;
+	padding: 50px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+}
+
+.dropzone-container:hover {
+	border: 2px dashed var(--primary-orange);
+}
+
+/* ------------------------------ GENERAL ------------------------------------ */
+
+/* ------------------------------ MUI SLIDER ------------------------------------ */
+.MuiSlider-root {
+	color: var(--secondary-blue-light) !important;
+}
+
+.MuiSlider-valueLabel {
+	background-color: #fff !important;
+	box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.05),
+		0px 2px 4px -2px rgba(0, 0, 0, 0.05), 0px 1px 2px -1px rgba(0, 0, 0, 0.05),
+		0px 1px 0px -1px rgba(0, 0, 0, 0.05) !important;
+	padding: 2px 7px 2px 7px !important;
+	color: black !important;
+	border-radius: 8px !important;
+	border: 1px solid var(--grey-200, #ececec) !important;
+}
+
+.MuiSlider-thumb.Mui-active {
+	box-shadow: 0px 0px 0px 8px rgba(112, 90, 248, 0.4) !important;
+}
+
+.MuiSlider-valueLabel {
+	font-size: 14px !important;
+	font-style: normal !important;
+	font-weight: 400 !important;
+	line-height: 20px !important;
+}
+
+.MuiSlider-valueLabel::before {
+	display: none !important;
+}
+
+.css-187mznn-MuiSlider-root {
+	height: 6px !important;
+	padding-top: 0px !important;
+}
+
+/* ------------------------------ MUI SLIDER ------------------------------------ */
+
+.watsAppInp input {
+	margin-left: -5px;
+	margin-top: 5px;
+}
+
+/* ------------------------------ LOGIN ------------------------------------ */
+.graphic-bg {
+	background: #fbfbfb;
+	height: 100vh !important;
+}
+
+.MuiMarkElement-root {
+	display: none !important;
+}
+
+.MuiChartsLegend-root {
+	display: none;
+}
+
+/* ------------------------------ LOGIN ------------------------------------ */
+
+/* ------------------------------ SIDEBAR ------------------------------------ */
+
+.secondary1 span {
+	background-color: #68cbba !important;
+}
+
+.secondary2 span {
+	background-color: #ff921b !important;
+}
+
+.MuiInputBase-root {
+	border-radius: none;
+}
+
+.rightArrowStyle {
+	margin-left: -14px;
+	margin-top: -30px;
+	/* background-color: red; */
+}
+
+.sidebar {
+	padding: 15px 20px 15px 20px;
+}
+
+.sidebar-margin {
+	margin: 15px 20px 15px 20px;
+}
+
+#internet-speed {
+	height: 1px !important;
+	border-radius: 30px;
+}
+/* .mobile-body {
+	overflow: auto;
+	height: 475px;
+} */
+.mob-view-input .MuiTextField-root .MuiOutlinedInput-root {
+	border-radius: 22px !important;
+	margin-top: 15px;
+}
+
+.sidebar-title {
+	color: #121212;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 20px;
+	/* 142.857% */
+}
+
+.sidebar-subtitle {
+	color: #5e5e5e;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 16px;
+	/* 133.333% */
+}
+
+.sidebar-links {
+	margin-top: 25px;
+}
+.css-1klcg8d-MuiAvatar-root {
+	width: 32px !important;
+	height: 32px !important;
+}
+.sidebar-link-item {
+	display: flex;
+	align-items: center;
+	padding: 10px 10px 10px 4px;
+	border-radius: 8px;
+	margin-top: 5px;
+	cursor: pointer;
+	margin-left: -10px;
+}
+fieldset {
+	border: 1px solid #dbdbdb !important;
+}
+.Mui-focused {
+	border: 1px solid #fd4f02;
+}
+
+.sidebar-link-item:hover {
+	background-color: #eeeeee !important;
+}
+
+.sidebar-link-item.active {
+	background-color: #ececec;
+}
+
+.sidebar-link-name {
+	margin-bottom: 0;
+	margin-left: 8px;
+	color: #5e5e5e;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+	/* 142.857% */
+}
+
+.recharts-default-legend {
+	display: none;
+}
+.sidebar-link-name.active {
+	color: #121212;
+	font-weight: 500;
+}
+
+.sidebar-bottom-links {
+	position: absolute;
+	bottom: 0;
+}
+.badgeChart span {
+	background-color: #04a88c;
+}
+.badgeChart1 span {
+	background-color: #5c78ff;
+}
+
+.custom-tooltip {
+	box-shadow: 0px 12px 24px -12px #00000014;
+	box-shadow: 0px 6px 12px -6px #0000001a;
+	border-radius: 8px;
+	padding: 16px;
+}
+.recharts-cartesian-axis-line {
+	display: none;
+}
+
+.MuiButtonBase-root {
+	box-shadow: none !important;
+}
+
+.aiAgentSearch::placeholder {
+	color: #121212;
+	font-weight: 400;
+}
+
+/* ------------------------------ SIDEBAR ------------------------------------ */
+
+/* ------------------------------ CONVERSATIONS ------------------------------------ */
+
+.unread-message {
+	font-weight: 600;
+	color: black;
+}
+
+/* .ant-tooltip-inner {
+	color: #334155 !important;
+} */
+
+/* ------------------------------ CONVERSATIONS ------------------------------------ */
+
+.settings-subtext {
+	width: 95%;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	color: #5e5e5e;
+	/* margin-top: -4px; */
+}
+
+.MuiSwitch-thumb {
+	background-color: white !important;
+}
+
+.slider-container {
+	background: #f5f5f5;
+	border-radius: 4px;
+	padding: 15px;
+}
+
+/* ------------------------------ CAMPIAGN ------------------------------------ */
+
+.research-result-container {
+	border-radius: 8px;
+	background: #fff;
+
+	/* shadow/md */
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.04),
+		0px 4px 4px -2px rgba(0, 0, 0, 0.04);
+	padding: 16px;
+}
+
+.template-container {
+	padding: 5px;
+	cursor: pointer;
+	border-bottom: 1px solid #dbdbdb;
+}
+
+.selected {
+	background: #cecece;
+	border-radius: 8px;
+}
+
+.template-container.selected {
+	background: #cecece;
+}
+
+.templates-accordion-body {
+	font-weight: 300;
+	font-size: 13px;
+	margin-bottom: 0;
+}
+
+.ant-space-item {
+	margin-bottom: 10px !important;
+}
+.ant-picker {
+	width: 100% !important;
+	margin-top: -10px !important;
+}
+.css-1012bww-MuiChip-root {
+	border-radius: 4px !important;
+}
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
+	background-color: transparent !important;
+}
+
+.contact-container {
+	background: #f5f5f5;
+	border-radius: 8px;
+	padding: 25px;
+	/* margin: 10px 10px 10px 0; */
+}
+
+.suggested-campaign-container {
+	background: #f5f5f5;
+	border-radius: 8px;
+	padding: 25px !important;
+	cursor: pointer;
+}
+
+.suggested-campaign-container.selected {
+	background: #cecece;
+}
+
+.suggested-campaign-container:not(.selected):hover {
+	background: #f0f0f0;
+}
+
+/* ------------------------------ MAGIC CAMPIAGN ------------------------------------ */
+
+/* ------------------------------ KNOWLEDGE BASE ------------------------------------ */
+.file-container {
+	background: rgba(245, 245, 245, 1);
+	padding: 15px 15px 15px 15px;
+	border-radius: 8px;
+}
+
+/* ------------------------------ KNOWLEDGE BASE ------------------------------------ */
+
+/* ------------------------------ CONNECTED APPS ------------------------------------ */
+.connector-container {
+	border-radius: 16px;
+	padding: 16px;
+	border: 1px solid #ececec;
+	background: #fff;
+	box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.05),
+		0px 2px 4px -2px rgba(0, 0, 0, 0.05), 0px 1px 2px -1px rgba(0, 0, 0, 0.05),
+		0px 1px 0px -1px rgba(0, 0, 0, 0.05);
+}
+
+.shopify-product-container {
+	padding: 25px;
+	margin-bottom: 15px;
+	border: 1px solid #ececec;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.05),
+		0px 2px 4px -2px rgba(0, 0, 0, 0.05), 0px 1px 2px -1px rgba(0, 0, 0, 0.05),
+		0px 1px 0px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* ------------------------------ CONNECTED APPS ------------------------------------ */
+
+/* ------------------------------ ONBOARD ------------------------------------ */
+.onboard-card {
+	border-radius: 16px;
+	border: 1px solid var(--grey-200, #ececec);
+	/* box-shadow: 0px 12px 24px -12px rgba(0, 0, 0, 0.08),
+    0px 6px 12px -6px rgba(0, 0, 0, 0.1); */
+	padding: 40px;
+}
+
+/* ------------------------------ ONBOARD ------------------------------------ */
+
+/* ------------------------------ WORKSPACE ------------------------------------ */
+/* 
+.chat-box-thread {
+	overflow-y: auto;
+}
+
+.empty-chat-container {
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.empty-chat-text {
+	font-size: 12px;
+	font-weight: 700;
+	color: grey;
+}
+
+.contact-msg-block {
+	display: flex;
+	justify-content: end;
+}
+
+.contact-msg {
+	padding: 8px 12px;
+	gap: 10px;
+	background: var(--secondary-blue-light);
+	border-radius: 8px;
+	font-weight: 400;
+	font-size: 14px;
+	color: #ffffff;
+	max-width: 90%;
+}
+
+.krispy-msg-block {
+	display: flex;
+	justify-content: start;
+}
+
+.krispy-msg {
+	padding: 8px 12px;
+	gap: 10px;
+	background: #f5f5f5;
+	border-radius: 8px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 20px;
+	color: #121212;
+	max-width: 90%;
+}
+
+.krispy-msg-right {
+	display: flex;
+	justify-content: end;
+}
+
+.krispy-right-msg {
+	padding: 10px 12px;
+	gap: 10px;
+	background: #eff1ff;
+	border-radius: 8px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 20px;
+	color: #121212;
+	height: 50px;
+	max-width: 90%;
+}
+
+.loading-msg {
+	opacity: 0.5;
+}
+
+.loading-msg-spinner {
+	width: 20px !important;
+	height: 20px !important;
+	margin-right: 10px;
+	margin-top: 5px;
+	color: #a6a6a6;
+}
+
+.exc-icon {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+}
+
+.cursor {
+	display: inline-block;
+	width: 1ch;
+	animation: flicker 0.5s infinite;
+	margin-bottom: 4px;
+}
+
+@keyframes flicker {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+.ant-modal-content {
+	box-shadow: none !important;
+}
+
+@keyframes blink {
+	from {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+.blinking-dot {
+	animation: blink 1s step-end infinite;
+} */
+
+/* ------------------------------ DEMO ------------------------------------ */
+.msgInput .MuiFormControl-root .MuiInputBase-root {
+	padding: 5px;
+}
+
+/* ------------------------------ DASHBOARD ------------------------------------ */
+.dashboard-card {
+	margin-bottom: 20px;
+	gap: 24px;
+	padding: 24px !important;
+	border-radius: 8px;
+	border: 1px solid #ececec;
+	/* box-shadow: 0px 3px 6px -3px rgba(0, 0, 0, 0.05), 0px 2px 4px -2px rgba(0, 0, 0, 0.05), 0px 1px 2px -1px rgba(0, 0, 0, 0.05), 0px 1px 0px -1px rgba(0, 0, 0, 0.05); */
+}
+.tabAct {
+	margin-left: -30px !important;
+}
+/* ------------------------------ DASHBOARD ------------------------------------ */
+
+/* ------------------------------ FLOWS ------------------------------------ */
+
+path.react-flow__edge-path {
+	stroke-width: 2px;
+	stroke: #fd7235;
+}
+.react-flow__handle {
+	width: 18px;
+	height: 18px;
+	background-color: #fd7235;
+	border: none;
+	cursor: pointer;
+}
+.react-flow__handle-right {
+	right: -9px;
+	bottom: 100px;
+}
+.react-flow__handle-left {
+	left: -8px;
+	top: 28px;
+}
+/* ------------------------------ FLOWS ------------------------------------ */
+
+.pricing-plan-container {
+	/* border: 1px solid grey; */
+	/* background-image: linear-gradient(45deg, #ffede6, rgba(255, 237, 230, 0)); */
+	border-radius: 1rem;
+	padding: 2rem;
+	height: 100%;
+}
+.pricing-plan-container .title {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.3;
+	/* color: #103350; */
+}
+.pricing-plan-container .divider {
+	background-color: rgba(253, 79, 2, 0.1);
+	width: 100%;
+	height: 1px;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.pricing-plan-container .primary-price {
+	color: #103350;
+	font-size: 3.5rem;
+	font-weight: 800;
+	line-height: 1.2;
+}
+.pricing-plan-container .primary-price > span {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.3;
+}
+.pricing-plan-container .secondary-price {
+	color: #103350;
+
+	font-size: 1rem;
+	font-weight: 600;
+	line-height: 1;
+}
+.pricing-plan-container .features {
+	font-size: 1.1rem;
+	font-weight: 300;
+	color: #103350;
+}
